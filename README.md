@@ -4,6 +4,27 @@ A powerful, interactive node-based pipeline builder built with **React**, **Reac
 
 ---
 
+## Home Page
+
+<img width="1280" height="587" alt="Image" src="https://github.com/user-attachments/assets/1ac2d27e-8da3-4aae-ad7c-4b36278c1a20" />
+
+## Flow Diagram Example
+
+<img width="1280" height="590" alt="Image" src="https://github.com/user-attachments/assets/6aa2c080-637b-437f-9905-442407cea354" />
+Drag and drop the nodes to create new edges.
+
+## Submit Pipeline
+
+<img width="1280" height="583" alt="Image" src="https://github.com/user-attachments/assets/1080cb75-6211-4f9c-92ee-3049beba6762" />
+
+On pressing the submit button you get a modal presenting the information of total number of nodes, edges and whether the nodes form a DAG or not.
+
+## Clear Pipeline
+
+<img width="1280" height="583" alt="Image" src="https://github.com/user-attachments/assets/02e3f97d-b0ad-4a6f-a856-4a73c848420f" />
+The project uses  [Zustand](https://github.com/pmndrs/zustand)  for state management.
+The nodes don't get cleared when refreshed due to persistent storing (local storing) and can only be cleared by clicking the "Clear Nodes" button.
+
 ## 🚀 Features
 
 * **Interactive Canvas**: Drag-and-drop interface for creating and connecting nodes.
