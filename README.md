@@ -15,8 +15,7 @@ Drag and drop the nodes to create new edges.
 
 ## Submit Pipeline
 
-<img width="1280" height="583" alt="Image" src="https://github.com/user-attachments/assets/1080cb75-6211-4f9c-92ee-3049beba6762" />
-
+<img width="1280" height="587" alt="Image" src="https://github.com/user-attachments/assets/121f1d4b-0d48-46d5-b220-1df377c230db" />
 On pressing the submit button you get a modal presenting the information of total number of nodes, edges and whether the nodes form a DAG or not.
 
 ## Clear Pipeline
