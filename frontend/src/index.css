@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary: #6366f1;
+  --primary-dark: #4f46e5;
+  --primary-light: #eef2ff;
+  --slate-50: #f8fafc;
+  --slate-100: #f1f5f9;
+  --slate-200: #e2e8f0;
+  --slate-300: #cbd5e1;
+  --slate-400: #94a3b8;
+  --slate-500: #64748b;
+  --slate-700: #334155;
+  --slate-900: #0f172a;
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg:
+    0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+body {
+  margin: 0;
+  font-family:
+    "Inter",
+    -apple-system,
+    sans-serif;
+  background-color: #ffffff;
+  color: var(--slate-900);
+  height: 100vh;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.main-header {
+  height: 60px;
+  background: white;
+  border-bottom: 1px solid var(--slate-200);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 20;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  background: linear-gradient(135deg, var(--primary) 0%, #8b5cf6 100%);
+  color: white;
+  font-weight: 800;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-size: 12px;
+  box-shadow: 0 2px 4px rgba(99, 102, 241, 0.3);
+}
+
+.header-logo h1 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  color: var(--slate-900);
+  letter-spacing: -0.02em;
+}
+
+.pipeline-toolbar {
+  background: #ffffff;
+  padding: 8px 20px;
+  border-bottom: 1px solid var(--slate-200);
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.pipeline-toolbar::-webkit-scrollbar {
+  display: none;
+}
+
+.canvas-container {
+  flex: 1;
+  position: relative;
+  background-color: #fafafa;
+}
+
+.submit-button {
+  background: var(--primary);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+  box-shadow: var(--shadow-sm);
+}
+
+.submit-button:hover {
+  background: var(--primary-dark);
+  box-shadow: 0 0 0 3px var(--primary-light);
+}
+
+.clear-button {
+  background: white;
+  color: var(--slate-500);
+  border: 1px solid var(--slate-200);
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.clear-button:hover {
+  background-color: #fff1f2;
+  border-color: #fecdd3;
+  color: #e11d48;
+}
+
+/* Draggable Items */
+.draggable-node-item {
+  cursor: grab;
+  padding: 6px 12px;
+  border: 1px solid var(--slate-200);
+  border-radius: 8px;
+  background: white;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--slate-700);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.draggable-node-item:hover {
+  border-color: var(--primary);
+  background: var(--primary-light);
+  color: var(--primary);
+  transform: translateY(-1px);
+}
+
+/* ... keep previous styles ... */
+
+/* Ensure the React Flow container has a high z-index and is visible */
+.react-flow {
+  z-index: 1;
+}
+
+/* VectorShift styled Controls */
+.react-flow__controls {
+  box-shadow: var(--shadow-lg) !important;
+  border: 1px solid var(--slate-200) !important;
+  border-radius: 8px !important;
+  overflow: hidden;
+  background-color: white !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0 !important;
+}
+
+.react-flow__controls-button {
+  background-color: white !important;
+  border-bottom: 1px solid var(--slate-100) !important;
+  border-right: none !important;
+  fill: var(--slate-500) !important;
+  width: 32px !important;
+  height: 32px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.react-flow__controls-button:hover {
+  background-color: var(--slate-50) !important;
+  fill: var(--primary) !important;
+}
+
+.react-flow__controls-button:last-child {
+  border-bottom: none !important;
+}
+
+/* Fix for MiniMap positioning */
+.react-flow__minimap {
+  border-radius: 12px !important;
+  border: 1px solid var(--slate-200) !important;
+  background-color: white !important;
+  box-shadow: var(--shadow-md) !important;
+  margin: 20px !important;
+}
+
+/* ... keep previous styles ... */
+
+.secondary-button {
+  background: white;
+  color: var(--slate-700);
+  border: 1px solid var(--slate-200);
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s;
+}
+
+.secondary-button:hover {
+  background-color: var(--slate-50);
+  border-color: var(--slate-300);
+  color: var(--slate-900);
+}
+
+.secondary-button:active {
+  background-color: var(--slate-100);
+  transform: translateY(1px);
+}
+
+.vertical-divider {
+  width: 1px;
+  height: 24px;
+  background-color: var(--slate-200);
+  margin: 0 8px;
+}
+
+/* Ensure controls are visible and styled */
+.react-flow__controls {
+  box-shadow: var(--shadow-md) !important;
+  border: 1px solid var(--slate-200) !important;
+  border-radius: 8px !important;
+  background: white !important;
+}
