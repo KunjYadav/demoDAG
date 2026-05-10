@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="100%" height="100%">
+  <defs>
+    <!-- Node Gradients -->
+    <linearGradient id="icoGradIn" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#0284C7" />
+    </linearGradient>
+    <linearGradient id="icoGradEmb" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A78BFA" />
+      <stop offset="100%" stop-color="#7C3AED" />
+    </linearGradient>
+    <linearGradient id="icoGradRet" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34D399" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <linearGradient id="icoGradGen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F472B6" />
+      <stop offset="100%" stop-color="#DB2777" />
+    </linearGradient>
+  </defs>
+
+  <!-- Solid DAG Connections -->
+  <path d="M 12 32 L 32 12 L 52 32 L 32 52 Z" fill="none" stroke="#475569" stroke-width="5" stroke-linejoin="round" />
+  
+  <!-- 4 Pipeline Nodes (Larger proportions for small-scale visibility) -->
+  <circle cx="12" cy="32" r="10" fill="url(#icoGradIn)" />
+  <circle cx="32" cy="12" r="10" fill="url(#icoGradEmb)" />
+  <circle cx="32" cy="52" r="10" fill="url(#icoGradRet)" />
+  
+  <!-- Final AI Generation Node with Sparkle -->
+  <circle cx="52" cy="32" r="10" fill="url(#icoGradGen)" />
+  <path d="M 52 26 C 52 30 48 32 48 32 C 48 32 52 34 52 38 C 52 34 56 32 56 32 C 56 32 52 30 52 26 Z" fill="#FFFFFF" />
+</svg>
